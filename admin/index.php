@@ -5,6 +5,7 @@ $mahasiswa = $database->mahasiswa->find();
 $matkul = $database->matakuliah->find();
 $dsn = $database->dosen->find();
 
+
 // Menghitung total data mahasiswa
 $total_mahasiswa = iterator_count($mahasiswa);
 
@@ -48,13 +49,13 @@ $total_jadwal = iterator_count($jdmatkul);
             <?php require ('components/sidebar.php')?>
 
             <!-- Main Content -->
-            <div class="col-md-10 content">
+            <div class="col-md-9 mt-3">
                 <h3>Selamat Datang, Admin</h3>
                 <p>Dashboard ini menyediakan akses cepat untuk mengelola dan memantau data mahasiswa, dosen, mata kuliah, dan jadwal kuliah di Fakultas Ilmu Komputer UNIKA Santo Thomas Medan.</p>
 
                 <div class="row">
                     <!-- Card Data Mahasiswa -->
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <div class="card-body">
                                 <div class="icon">👨‍🎓</div>
@@ -65,7 +66,7 @@ $total_jadwal = iterator_count($jdmatkul);
                     </div>
 
                     <!-- Card Data Dosen -->
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <div class="card-body">
                                 <div class="icon">👨‍🏫</div>
@@ -76,7 +77,7 @@ $total_jadwal = iterator_count($jdmatkul);
                     </div>
 
                     <!-- Card Data Mata Kuliah -->
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <div class="card-body">
                                 <div class="icon">📘</div>
@@ -87,7 +88,7 @@ $total_jadwal = iterator_count($jdmatkul);
                     </div>
 
                     <!-- Card Data Jadwal Kuliah -->
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="card">
                             <div class="card-body">
                                 <div class="icon">📅</div>

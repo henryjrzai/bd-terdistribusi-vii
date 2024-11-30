@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php require('components/sidebar.php') ?>
 
         <!-- Main Content -->
-        <div class="col-md-10 content">
+        <div class="col-md-10 mt-3">
             <h3>Data Dosen</h3>
             <button class="btn btn-primary my-3" data-toggle="modal" data-target="#exampleModal">➕ Tambah Data</button>
             <br>
