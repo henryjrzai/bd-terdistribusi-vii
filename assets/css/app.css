@@ -1,0 +1,89 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+}
+.navbar {
+    background-color: #0a3d62;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+.navbar-brand img {
+    max-width: 50px;
+    margin-right: 15px;
+}
+.navbar-brand:hover {
+    color: #dcdcdc;
+}
+.sidebar {
+    height: 100vh;
+    background-color: #1e3799;
+    padding-top: 20px;
+    border-right: 1px solid #ddd;
+    position: sticky;
+}
+.sidebar a {
+    padding: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+.sidebar a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+.sidebar a:hover {
+    background-color: #f8c291;
+    color: #2c3e50;
+}
+.content {
+    padding: 20px;
+    margin-left: 250px;
+}
+.card {
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card .card-body {
+    text-align: center;
+}
+.card .icon {
+    font-size: 40px;
+    color: #0a3d62;
+}
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.card-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0a3d62;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
