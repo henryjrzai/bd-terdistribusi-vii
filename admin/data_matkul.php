@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         Aplikasi Jadwal Perkuliahan - Admin
     </a>
     <div class="ml-auto">
-        <a href="../logout.php" class="btn btn-light">Logout</a>
+    <a href="../logout.php" class="btn btn-light">Logout</a>
     </div>
 </nav>
 

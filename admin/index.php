@@ -45,7 +45,7 @@ $total_jadwal = iterator_count($jdmatkul);
             Aplikasi Jadwal Perkuliahan - Admin
         </a>
         <div class="ml-auto">
-            <a href="../logout.php" class="btn btn-light">Logout</a>
+        <a href="../logout.php" class="btn btn-light">Logout</a>
         </div>
     </nav>
 
