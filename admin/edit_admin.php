@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['admin_id'])) {
+    header('Location: ../../login.php');
+    exit();
+}
 require ('../mongodb_connection.php');
 use MongoDB\BSON\ObjectId;
 if (isset($_GET['_id'])){

@@ -1,3 +1,29 @@
+<?php
+
+session_start();
+if (isset($_SESSION['admin_id'])) {
+    header('Location: /admin/index.php');
+    exit();
+}
+require('mongodb_connection.php');
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $collection = $database->admin;
+    $result = $collection->findOne(['email' => $email]);
+
+    if ($result && $result['password'] === $password) {
+        $_SESSION['admin_id'] = (string) $result['_id'];
+        header('Location: /admin/index.php');
+        exit();
+    } else {
+        $error = "Invalid email or password.";
+    }
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -47,7 +73,10 @@
 <body class="text-center">
 
 <main class="form-signin w-100 m-auto">
-    <form>
+<?php if (isset($error)): ?>
+                <div class="alert alert-danger"><?= $error ?></div>
+            <?php endif; ?>
+<form action="" method="post">
         <h1 class="h3 mb-3 fw-normal">Silahkan Login</h1>
 
         <div class="form-floating">

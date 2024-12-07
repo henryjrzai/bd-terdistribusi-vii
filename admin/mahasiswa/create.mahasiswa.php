@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['admin_id'])) {
+    header('Location: ../../../login.php');
+    exit();
+}
 require('../../mongodb_connection.php');
 
 if (isset($_POST['npm'], $_POST['nama'], $_POST['jurusan'], $_POST['alamat'], $_POST['email'], $_POST['no_hp'])) {
