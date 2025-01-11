@@ -25,96 +25,124 @@ $total_jadwal = iterator_count($jdmatkul);
 
 ?>
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Admin - Aplikasi Jadwal Perkuliahan Fakultas Ilmu Komputer</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/app.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
+    <link rel="stylesheet" href="../assets/css/styles.min.css" />
 </head>
+
 <body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed">
+        
+        <?php
+        require ('components/side.php');
+        ?>
 
-    <!-- Navigation Bar dengan Logo -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">
-            <img src="../logo.jpg" alt="Logo">
-            Aplikasi Jadwal Perkuliahan - Admin
-        </a>
-        <div class="ml-auto">
-        <a href="../logout.php" class="btn btn-light">Logout</a>
-        </div>
-    </nav>
-
-    <div class="container-fluid">
-        <div class="row">
-            <?php require ('components/sidebar.php')?>
-
-            <!-- Main Content -->
-            <div class="col-md-9 mt-3">
-                <h3>Selamat Datang, Admin</h3>
-                <p>Dashboard ini menyediakan akses cepat untuk mengelola dan memantau data mahasiswa, dosen, mata kuliah, dan jadwal kuliah di Fakultas Ilmu Komputer UNIKA Santo Thomas Medan.</p>
-
+        <!--  Main wrapper -->
+        <div class="body-wrapper">
+            <!--  Header Start -->
+            <?php
+            require ('components/nav.php');
+            ?>
+            <!--  Header End -->
+            <div class="container-fluid">
+                <!--  Row 1 -->
                 <div class="row">
-                    <!-- Card Data Mahasiswa -->
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="icon">👨‍🎓</div>
-                                <h5 class="card-title">Data Mahasiswa</h5>
-                                <p class="card-text">Total: <?php echo $total_mahasiswa; ?></p>
+                    <div class="row">
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card overflow-hidden rounded-2">
+                                <div class="card-body">
+                                    <div class="row alig n-items-start">
+                                        <div class="col-8">
+                                            <h5 class="card-title mb-9 fw-semibold"> Mahasiswa </h5>
+                                            <h4 class="fw-semibold mb-3">Total: <?php echo $total_mahasiswa; ?></h4>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="d-flex justify-content-end">
+                                                <div
+                                                    class="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
+                                                    <i class="ti ti-empathize fs-6"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Card Data Dosen -->
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="icon">👨‍🏫</div>
-                                <h5 class="card-title">Data Dosen</h5>
-                                <p class="card-text">Total: <?php echo $total_dosen; ?></p>
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card overflow-hidden rounded-2">
+                                <div class="card-body">
+                                    <div class="row alig n-items-start">
+                                        <div class="col-8">
+                                            <h5 class="card-title mb-9 fw-semibold"> Dosen </h5>
+                                            <h4 class="fw-semibold mb-3">Total: <?php echo $total_dosen; ?></h4>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="d-flex justify-content-end">
+                                                <div
+                                                    class="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
+                                                    <i class="ti ti-users fs-6"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Card Data Mata Kuliah -->
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="icon">📘</div>
-                                <h5 class="card-title">Data Mata Kuliah</h5>
-                                <p class="card-text">Total: <?php echo $total_makul; ?></p>
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card overflow-hidden rounded-2">
+                                <div class="card-body">
+                                    <div class="row alig n-items-start">
+                                        <div class="col-8">
+                                            <h5 class="card-title mb-9 fw-semibold"> Mata Kuliah </h5>
+                                            <h4 class="fw-semibold mb-3">Total: <?php echo $total_makul; ?></h4>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="d-flex justify-content-end">
+                                                <div
+                                                    class="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
+                                                    <i class="ti ti-book fs-6"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Card Data Jadwal Kuliah -->
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="icon">📅</div>
-                                <h5 class="card-title">Data Jadwal Kuliah</h5>
-                                <p class="card-text">Total: <?php echo $total_jadwal; ?></p>
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card overflow-hidden rounded-2">
+                                <div class="card-body">
+                                    <div class="row alig n-items-start">
+                                        <div class="col-8">
+                                            <h5 class="card-title mb-9 fw-semibold"> Jadwal Kuliah </h5>
+                                            <h4 class="fw-semibold mb-3">Total: <?php echo $total_jadwal; ?></h4>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="d-flex justify-content-end">
+                                                <div
+                                                    class="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
+                                                    <i class="ti ti-notebook fs-6"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        &copy; 2024 Aplikasi Jadwal Perkuliahan - Fakultas Ilmu Komputer UNIKA Santo Thomas Medan
-    </div>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <?php
+        require ('components/foot.php');
+        ?>
 </body>
+
 </html>
