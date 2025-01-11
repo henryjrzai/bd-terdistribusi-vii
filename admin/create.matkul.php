@@ -4,7 +4,7 @@ if (!isset($_SESSION['admin_id'])) {
     header('Location: /admin/login.php');
     exit();
 }
-require('../mongodb_connection.php');
+require('mongodb_connection.php');
 $collection = $database->matakuliah;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
