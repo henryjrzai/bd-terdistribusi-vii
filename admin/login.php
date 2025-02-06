@@ -5,7 +5,7 @@ if (isset($_SESSION['admin_id'])) {
     header('Location: /admin/index.php');
     exit();
 }
-require('../mongodb_connection.php');
+require('mongodb_connection.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
